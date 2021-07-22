@@ -3,5 +3,20 @@ h1 {
     color: $red-color;
 }
 .card{
-    min-height: 100px !important;
+    margin-left: 2rem;
+    height: 22rem !important;
+    overflow: hidden;
+    box-sizing: border-box;
 }
+.card-img-top {
+    height: 10rem !important
+ };  
+
+.card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical ;
+    min-height: 4rem;
+};

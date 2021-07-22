@@ -1,6 +1,6 @@
 const Course = require('../modals/Course')
 
-class SiteController {
+class CourseController {
     //[get] /search
     search(req, res) {
         res.render('search');
@@ -24,4 +24,4 @@ class SiteController {
         .catch(next)
     }
 }
-module.exports = new SiteController();
+module.exports = new CourseController();
