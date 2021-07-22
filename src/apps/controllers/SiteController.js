@@ -1,3 +1,5 @@
+const Course = require('../modals/Course')
+
 class SiteController {
     //[get] /search
     search(req, res) {
@@ -5,7 +7,13 @@ class SiteController {
     }
     //[GET] /
     index(req, res) {
-        res.render('home');
+
+       Course.find({},(err,doc) =>{
+           if(!err) res.json(doc)
+           else
+           res.status(404).json({error: "ERROR!"})
+       })
+       // res.render('home');
     }
 }
 module.exports = new SiteController();
