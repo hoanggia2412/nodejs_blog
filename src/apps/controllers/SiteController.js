@@ -16,10 +16,12 @@ class SiteController {
        // res.render('home');
 
        Course.find({})
-       .then(course => 
+       .then(course => {
+        course = course.map(course => course.toObject())
         res.render('home',{
-            course})
-       ).catch(next)
+            course
+        })})
+        .catch(next)
     }
 }
 module.exports = new SiteController();
